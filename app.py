@@ -33,7 +33,7 @@ def prepare_image(image, target):
     #image = imagenet_utils.preprocess_input(image)
     # return the processed image
     return image
-@app.route("/predict", methods=["GET","POST"])
+@app.route("/predict", methods=["POST"])
 def predict():
     if flask.request.method == "POST":
         if flask.request.files.get("image"):
